@@ -1,7 +1,7 @@
 
 ---
 
-# Detecção de Oportunidades de Sanduíche MEV via Grafo de Fluxo de Controle
+# Detecção de Oportunidades de Sanduíche MEV via Grafo de Fluxo de Controle de Contratos Inteligentes
 
 Este artefato contém a implementação da ferramenta de análise estática desenvolvida para detectar oportunidades de Sanduíche MEV em contratos inteligentes Ethereum, utilizando Grafos de Fluxo de Controle (CFG).
 
