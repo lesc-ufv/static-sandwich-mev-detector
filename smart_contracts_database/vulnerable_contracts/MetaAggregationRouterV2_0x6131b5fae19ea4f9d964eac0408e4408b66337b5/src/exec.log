@@ -1,8 +1,9 @@
 'solc --version' running
-'solc ./MetaAggregationRouterV2.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --optimize --optimize-runs 999999 --no-optimize-yul --metadata-hash ipfs --evm-version london --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/MetaAggregationRouterV2_0x6131b5fae19ea4f9d964eac0408e4408b66337b5/src' running
+'solc ./MetaAggregationRouterV2.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --optimize --optimize-runs 999999 --no-optimize-yul --metadata-hash ipfs --evm-version london --allow-paths .,/home/josue/Github/static-sandwich-mev-detector/smart_contracts_database/vulnerable_contracts/MetaAggregationRouterV2_0x6131b5fae19ea4f9d964eac0408e4408b66337b5/src' running
 
-Detector: generic-slippage
-MetaAggregationRouterV2._takeFee(IERC20,address,address[],uint256[],uint256,bool) (MetaAggregationRouterV2.sol#528-550) Sandwich Vulnerability Detected in '_takeFee' at line [538].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['from', 'totalAmount', 'recipients', 'token']Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#generic-slippage
+Detector: static-sandwich
+MetaAggregationRouterV2._takeFee(IERC20,address,address[],uint256[],uint256,bool) (MetaAggregationRouterV2.sol#528-550) Sandwich Opportunity Detected in '_takeFee' at line [538].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['token', 'recipients', 'from', 'totalAmount']Reference: https://github.com/lesc-ufv/static-sandwich-mev-detector
 . analyzed (13 contracts with 1 detectors), 1 result(s) found
+INFO:Slither:output.json exists already, the overwrite is prevented

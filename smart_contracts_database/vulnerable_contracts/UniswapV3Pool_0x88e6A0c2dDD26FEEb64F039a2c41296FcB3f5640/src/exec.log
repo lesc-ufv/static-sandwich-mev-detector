@@ -1,16 +1,17 @@
 'solc --version' running
-'solc ./UniswapV3Pool.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --optimize --optimize-runs 800 --no-optimize-yul --metadata-hash none --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/UniswapV3Pool_0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640/src' running
+'solc ./UniswapV3Pool.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --optimize --optimize-runs 800 --no-optimize-yul --metadata-hash none --allow-paths .,/home/josue/Github/static-sandwich-mev-detector/smart_contracts_database/vulnerable_contracts/UniswapV3Pool_0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640/src' running
 'solc --version' running
-'solc ./NoDelegateCall.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --optimize --optimize-runs 800 --no-optimize-yul --metadata-hash none --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/UniswapV3Pool_0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640/src' running
+'solc ./NoDelegateCall.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --optimize --optimize-runs 800 --no-optimize-yul --metadata-hash none --allow-paths .,/home/josue/Github/static-sandwich-mev-detector/smart_contracts_database/vulnerable_contracts/UniswapV3Pool_0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640/src' running
 
-Detector: generic-slippage
-UniswapV3Pool.swap(address,bool,int256,uint160,bytes) (UniswapV3Pool.sol#596-788) Sandwich Vulnerability Detected in 'swap' at line [653].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'sqrtPriceLimitX96', 'zeroForOne']UniswapV3Pool.swap(address,bool,int256,uint160,bytes) (UniswapV3Pool.sol#596-788) Sandwich Vulnerability Detected in 'swap' at line [655].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'sqrtPriceLimitX96', 'zeroForOne']UniswapV3Pool.swap(address,bool,int256,uint160,bytes) (UniswapV3Pool.sol#596-788) Sandwich Vulnerability Detected in 'swap' at line [773].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'sqrtPriceLimitX96', 'zeroForOne']UniswapV3Pool.swap(address,bool,int256,uint160,bytes) (UniswapV3Pool.sol#596-788) Sandwich Vulnerability Detected in 'swap' at line [779].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'sqrtPriceLimitX96', 'zeroForOne']Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#generic-slippage
+Detector: static-sandwich
+UniswapV3Pool.swap(address,bool,int256,uint160,bytes) (UniswapV3Pool.sol#596-788) Sandwich Opportunity Detected in 'swap' at line [653].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'zeroForOne', 'sqrtPriceLimitX96']UniswapV3Pool.swap(address,bool,int256,uint160,bytes) (UniswapV3Pool.sol#596-788) Sandwich Opportunity Detected in 'swap' at line [655].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'zeroForOne', 'sqrtPriceLimitX96']UniswapV3Pool.swap(address,bool,int256,uint160,bytes) (UniswapV3Pool.sol#596-788) Sandwich Opportunity Detected in 'swap' at line [773].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'zeroForOne', 'sqrtPriceLimitX96']UniswapV3Pool.swap(address,bool,int256,uint160,bytes) (UniswapV3Pool.sol#596-788) Sandwich Opportunity Detected in 'swap' at line [779].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'zeroForOne', 'sqrtPriceLimitX96']Reference: https://github.com/lesc-ufv/static-sandwich-mev-detector
 . analyzed (32 contracts with 1 detectors), 4 result(s) found
+INFO:Slither:output.json exists already, the overwrite is prevented

@@ -1,5 +1,5 @@
 'solc --version' running
-'solc ./AggregationRouterV5.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/AggregationRouterV5_0x1111111254eeb25477b68fb85ed929f73a960582/src' running
+'solc ./AggregationRouterV5.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/home/josue/Github/static-sandwich-mev-detector/smart_contracts_database/vulnerable_contracts/AggregationRouterV5_0x1111111254eeb25477b68fb85ed929f73a960582/src' running
 Compilation warnings/errors on ./AggregationRouterV5.sol:
 Warning: Contract code size is 33028 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.
     --> AggregationRouterV5.sol:4768:1:
@@ -9,32 +9,33 @@ Warning: Contract code size is 33028 bytes and exceeds 24576 bytes (a limit intr
 
 
 
-Detector: generic-slippage
-GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes,bytes) (AggregationRouterV5.sol#973-1028) Sandwich Vulnerability Detected in 'swap' at line [1015].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['desc']GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes,bytes) (AggregationRouterV5.sol#973-1028) Sandwich Vulnerability Detected in 'swap' at line [1021].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['desc']GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes,bytes) (AggregationRouterV5.sol#973-1028) Sandwich Vulnerability Detected in 'swap' at line [1023].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['desc']UnoswapRouter._unoswap(address,IERC20,uint256,uint256,uint256[]) (AggregationRouterV5.sol#1139-1294) Sandwich Vulnerability Detected in '_unoswap' at line [1293].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['amount', 'minReturn']UnoswapV3Router._uniswapV3Swap(address,uint256,uint256,uint256[]) (AggregationRouterV5.sol#2807-2842) Sandwich Vulnerability Detected in '_uniswapV3Swap' at line [2835].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['minReturn', 'amount', 'recipient', 'pools']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4461].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'takingAmount', 'order_']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4468].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['takingAmount', 'interaction', 'makingAmount', 'skipPermitAndThresholdAmount', 'order_']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4471].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'takingAmount', 'order_']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4474].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'interaction', 'takingAmount', 'order_']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4479].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['takingAmount', 'interaction', 'makingAmount', 'skipPermitAndThresholdAmount', 'order_']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4516, 4517, 4518].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'interaction', 'takingAmount', 'order_']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4526].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'interaction', 'takingAmount', 'order_']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4527].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'interaction', 'takingAmount', 'order_']Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#generic-slippage
+Detector: static-sandwich
+GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes,bytes) (AggregationRouterV5.sol#973-1028) Sandwich Opportunity Detected in 'swap' at line [1015].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['desc']GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes,bytes) (AggregationRouterV5.sol#973-1028) Sandwich Opportunity Detected in 'swap' at line [1021].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['desc']GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes,bytes) (AggregationRouterV5.sol#973-1028) Sandwich Opportunity Detected in 'swap' at line [1023].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['desc']UnoswapRouter._unoswap(address,IERC20,uint256,uint256,uint256[]) (AggregationRouterV5.sol#1139-1294) Sandwich Opportunity Detected in '_unoswap' at line [1293].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['amount', 'minReturn']UnoswapV3Router._uniswapV3Swap(address,uint256,uint256,uint256[]) (AggregationRouterV5.sol#2807-2842) Sandwich Opportunity Detected in '_uniswapV3Swap' at line [2835].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['pools', 'amount', 'minReturn', 'recipient']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Opportunity Detected in 'fillOrderTo' at line [4461].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['order_', 'takingAmount', 'makingAmount']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Opportunity Detected in 'fillOrderTo' at line [4468].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['order_', 'interaction', 'takingAmount', 'makingAmount', 'skipPermitAndThresholdAmount']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Opportunity Detected in 'fillOrderTo' at line [4471].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['order_', 'takingAmount', 'makingAmount']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Opportunity Detected in 'fillOrderTo' at line [4474].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['order_', 'takingAmount', 'interaction', 'makingAmount']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Opportunity Detected in 'fillOrderTo' at line [4479].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['order_', 'interaction', 'takingAmount', 'makingAmount', 'skipPermitAndThresholdAmount']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Opportunity Detected in 'fillOrderTo' at line [4516, 4517, 4518].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['order_', 'takingAmount', 'interaction', 'makingAmount']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Opportunity Detected in 'fillOrderTo' at line [4526].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['order_', 'takingAmount', 'interaction', 'makingAmount']OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Opportunity Detected in 'fillOrderTo' at line [4527].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['order_', 'takingAmount', 'interaction', 'makingAmount']Reference: https://github.com/lesc-ufv/static-sandwich-mev-detector
 . analyzed (43 contracts with 1 detectors), 13 result(s) found
+INFO:Slither:output.json exists already, the overwrite is prevented

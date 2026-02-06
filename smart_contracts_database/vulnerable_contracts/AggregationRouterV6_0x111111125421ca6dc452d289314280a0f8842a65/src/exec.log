@@ -1,5 +1,5 @@
 'solc --version' running
-'solc ./AggregationRouterV6.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 1600 --yul-optimizations dhfoDgvulfnTUtnIf[xa[r]EscLMcCTUtTOntnfDIulLculVcul [j]Tpeulxa[rul]xa[r]cLCTUca[r]LSsTFOtfDnca[r]Iulc]jmul[jul] VcTOcul jmul : fDnTOc --evm-version shanghai --via-ir --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/AggregationRouterV6_0x111111125421ca6dc452d289314280a0f8842a65/src' running
+'solc ./AggregationRouterV6.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 1600 --yul-optimizations dhfoDgvulfnTUtnIf[xa[r]EscLMcCTUtTOntnfDIulLculVcul [j]Tpeulxa[rul]xa[r]cLCTUca[r]LSsTFOtfDnca[r]Iulc]jmul[jul] VcTOcul jmul : fDnTOc --evm-version shanghai --via-ir --allow-paths .,/home/josue/Github/static-sandwich-mev-detector/smart_contracts_database/vulnerable_contracts/AggregationRouterV6_0x111111125421ca6dc452d289314280a0f8842a65/src' running
 Impossible to generate IR for AggregationRouterV6.ethUnoswap (AggregationRouterV6.sol#5028-5033):
  'NoneType' object has no attribute 'parameters'
 Impossible to generate IR for AggregationRouterV6.ethUnoswapTo (AggregationRouterV6.sol#5044-5049):
@@ -23,22 +23,23 @@ Impossible to generate IR for AggregationRouterV6._unoswap (AggregationRouterV6.
 Impossible to generate IR for AggregationRouterV6._unoswapV3 (AggregationRouterV6.sol#5319-5355):
  'NoneType' object has no attribute 'parameters'
 
-Detector: generic-slippage
-Math.sqrt(uint256,Math.Rounding) (AggregationRouterV6.sol#2730-2735) Sandwich Vulnerability Detected in 'sqrt' at line [2733].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['rounding', 'a']Math.log2(uint256,Math.Rounding) (AggregationRouterV6.sol#2783-2788) Sandwich Vulnerability Detected in 'log2' at line [2786].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['value', 'rounding']Math.log10(uint256,Math.Rounding) (AggregationRouterV6.sol#2832-2837) Sandwich Vulnerability Detected in 'log10' at line [2835].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['value', 'rounding']Math.log256(uint256,Math.Rounding) (AggregationRouterV6.sol#2875-2880) Sandwich Vulnerability Detected in 'log256' at line [2878].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['value', 'rounding']GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes) (AggregationRouterV6.sol#4758-4805) Sandwich Vulnerability Detected in 'swap' at line [4792].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['desc']GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes) (AggregationRouterV6.sol#4758-4805) Sandwich Vulnerability Detected in 'swap' at line [4798].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['desc']GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes) (AggregationRouterV6.sol#4758-4805) Sandwich Vulnerability Detected in 'swap' at line [4800].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['desc']UnoswapRouter._curfe(address,uint256,uint256,Address) (AggregationRouterV6.sol#5390-5592) Sandwich Vulnerability Detected in '_curfe' at line [5591].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['minReturn', 'dex']Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#generic-slippage
+Detector: static-sandwich
+Math.sqrt(uint256,Math.Rounding) (AggregationRouterV6.sol#2730-2735) Sandwich Opportunity Detected in 'sqrt' at line [2733].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['a', 'rounding']Math.log2(uint256,Math.Rounding) (AggregationRouterV6.sol#2783-2788) Sandwich Opportunity Detected in 'log2' at line [2786].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['value', 'rounding']Math.log10(uint256,Math.Rounding) (AggregationRouterV6.sol#2832-2837) Sandwich Opportunity Detected in 'log10' at line [2835].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['value', 'rounding']Math.log256(uint256,Math.Rounding) (AggregationRouterV6.sol#2875-2880) Sandwich Opportunity Detected in 'log256' at line [2878].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['value', 'rounding']GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes) (AggregationRouterV6.sol#4758-4805) Sandwich Opportunity Detected in 'swap' at line [4792].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['desc']GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes) (AggregationRouterV6.sol#4758-4805) Sandwich Opportunity Detected in 'swap' at line [4798].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['desc']GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes) (AggregationRouterV6.sol#4758-4805) Sandwich Opportunity Detected in 'swap' at line [4800].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['desc']UnoswapRouter._curfe(address,uint256,uint256,Address) (AggregationRouterV6.sol#5390-5592) Sandwich Opportunity Detected in '_curfe' at line [5591].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['dex', 'minReturn']Reference: https://github.com/lesc-ufv/static-sandwich-mev-detector
 . analyzed (55 contracts with 1 detectors), 8 result(s) found
+INFO:Slither:output.json exists already, the overwrite is prevented

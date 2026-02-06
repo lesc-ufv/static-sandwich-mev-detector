@@ -1,5 +1,5 @@
 'solc --version' running
-'solc ./InstaDefaultImplementation.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --metadata-literal --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/InstaDefaultImplementation_0x01d1f55d94a53a9517c07f793f35320FAA0D2DCf/src' running
+'solc ./InstaDefaultImplementation.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --metadata-literal --allow-paths .,/home/josue/Github/static-sandwich-mev-detector/smart_contracts_database/vulnerable_contracts/InstaDefaultImplementation_0x01d1f55d94a53a9517c07f793f35320FAA0D2DCf/src' running
 Compilation warnings/errors on ./InstaDefaultImplementation.sol:
 Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
 --> ./InstaDefaultImplementation.sol
@@ -33,3 +33,4 @@ Warning: Function state mutability can be restricted to pure
 
 
 . analyzed (7 contracts with 1 detectors), 0 result(s) found
+INFO:Slither:output.json exists already, the overwrite is prevented

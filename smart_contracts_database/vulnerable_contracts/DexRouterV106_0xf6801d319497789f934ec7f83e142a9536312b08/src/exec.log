@@ -1,0 +1,79 @@
+'solc --version' running
+'solc ./UnxswapV3Router.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 1 --no-optimize-yul --allow-paths .,/home/josue/Github/static-sandwich-mev-detector/smart_contracts_database/vulnerable_contracts/DexRouterV106_0xf6801d319497789f934ec7f83e142a9536312b08/src' running
+Compilation warnings/errors on ./UnxswapV3Router.sol:
+Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  --> UnxswapV3Router.sol:50:9:
+   |
+50 |         uint256 minReturn,
+   |         ^^^^^^^^^^^^^^^^^
+
+
+'solc --version' running
+'solc ./DagRouter.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 1 --no-optimize-yul --allow-paths .,/home/josue/Github/static-sandwich-mev-detector/smart_contracts_database/vulnerable_contracts/DexRouterV106_0xf6801d319497789f934ec7f83e142a9536312b08/src' running
+'solc --version' running
+'solc ./UnxswapRouter.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 1 --no-optimize-yul --allow-paths .,/home/josue/Github/static-sandwich-mev-detector/smart_contracts_database/vulnerable_contracts/DexRouterV106_0xf6801d319497789f934ec7f83e142a9536312b08/src' running
+Compilation warnings/errors on ./UnxswapRouter.sol:
+Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  --> UnxswapRouter.sol:48:9:
+   |
+48 |         uint256 minReturn,
+   |         ^^^^^^^^^^^^^^^^^
+
+
+'solc --version' running
+'solc ./DexRouterV106.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 1 --no-optimize-yul --allow-paths .,/home/josue/Github/static-sandwich-mev-detector/smart_contracts_database/vulnerable_contracts/DexRouterV106_0xf6801d319497789f934ec7f83e142a9536312b08/src' running
+Compilation warnings/errors on ./DexRouterV106.sol:
+Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  --> UnxswapRouter.sol:48:9:
+   |
+48 |         uint256 minReturn,
+   |         ^^^^^^^^^^^^^^^^^
+
+Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  --> UnxswapV3Router.sol:50:9:
+   |
+50 |         uint256 minReturn,
+   |         ^^^^^^^^^^^^^^^^^
+
+Warning: Function state mutability can be restricted to view
+   --> libraries/CommissionLib.sol:198:5:
+    |
+198 |     function _getBalanceOf(
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning: Contract code size is 25758 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.
+  --> DexRouterV106.sol:23:1:
+   |
+23 | contract DexRouter is
+   | ^ (Relevant source part starts here and spans across multiple lines).
+
+
+
+Detector: static-sandwich
+CommonLib._transferTokenToUser(address,address) (libraries/CommonLib.sol#111-138) Sandwich Opportunity Detected in '_transferTokenToUser' at line [133].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['token']DagRouter._exeNode(address,address,uint256,uint256,bool,IDexRouter.RouterPath,DagRouter.SwapState) (DagRouter.sol#93-185) Sandwich Opportunity Detected in '_exeNode' at line [156].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['path', 'nodeBalance']SafeMath.divCeil(uint256,uint256) (libraries/SafeMath.sol#159-167) Sandwich Opportunity Detected in 'divCeil' at line [162].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['a', 'b']Reference: https://github.com/lesc-ufv/static-sandwich-mev-detector
+
+Detector: static-sandwich
+SafeMath.divCeil(uint256,uint256) (libraries/SafeMath.sol#159-167) Sandwich Opportunity Detected in 'divCeil' at line [162].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['a', 'b']Reference: https://github.com/lesc-ufv/static-sandwich-mev-detector
+
+Detector: static-sandwich
+CommonLib._transferTokenToUser(address,address) (libraries/CommonLib.sol#111-138) Sandwich Opportunity Detected in '_transferTokenToUser' at line [133].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['token']DagRouter._exeNode(address,address,uint256,uint256,bool,IDexRouter.RouterPath,DagRouter.SwapState) (DagRouter.sol#93-185) Sandwich Opportunity Detected in '_exeNode' at line [156].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['path', 'nodeBalance']CommissionLib._doCommissionAndTrimToToken(AbstractCommissionLib.CommissionInfo,address,uint256,address,AbstractCommissionLib.TrimInfo) (libraries/CommissionLib.sol#537-592) Sandwich Opportunity Detected in '_doCommissionAndTrimToToken' at line [569].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['commissionInfo', 'trimInfo', 'balanceBefore']CommissionLib._doCommissionAndTrimToToken(AbstractCommissionLib.CommissionInfo,address,uint256,address,AbstractCommissionLib.TrimInfo) (libraries/CommissionLib.sol#537-592) Sandwich Opportunity Detected in '_doCommissionAndTrimToToken' at line [574].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['commissionInfo', 'trimInfo', 'balanceBefore']SafeMath.divCeil(uint256,uint256) (libraries/SafeMath.sol#159-167) Sandwich Opportunity Detected in 'divCeil' at line [162].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['a', 'b']Reference: https://github.com/lesc-ufv/static-sandwich-mev-detector
+. analyzed (69 contracts with 1 detectors), 9 result(s) found
+INFO:Slither:output.json exists already, the overwrite is prevented

@@ -1,5 +1,5 @@
 'solc --version' running
-'solc ./UniversalRouter.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --via-ir --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/UniversalRouter_0x66a9893cc07d91d95644aedd05d03f95e1dba8af/src' running
+'solc ./UniversalRouter.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --via-ir --allow-paths .,/home/josue/Github/static-sandwich-mev-detector/smart_contracts_database/vulnerable_contracts/UniversalRouter_0x66a9893cc07d91d95644aedd05d03f95e1dba8af/src' running
 Compilation warnings/errors on ./UniversalRouter.sol:
 Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
 --> v2-core/contracts/interfaces/IUniswapV2Pair.sol
@@ -24,38 +24,39 @@ Impossible to generate IR for Dispatcher.v3SwapExactInput (modules/uniswap/v3/V3
 Impossible to generate IR for Dispatcher._swap (modules/uniswap/v3/V3SwapRouter.sol#138-153):
  'NoneType' object has no attribute 'parameters'
 
-Detector: generic-slippage
-DeltaResolver._mapWrapUnwrapAmount(Currency,uint256,Currency) (lib/v4-periphery/src/base/DeltaResolver.sol#102-122) Sandwich Vulnerability Detected in '_mapWrapUnwrapAmount' at line [120].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['inputCurrency', 'amount', 'outputCurrency']V4Router._handleAction(uint256,bytes) (lib/v4-periphery/src/V4Router.sol#31-79) Sandwich Vulnerability Detected in '_handleAction' at line [55].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['params']V4Router._handleAction(uint256,bytes) (lib/v4-periphery/src/V4Router.sol#31-79) Sandwich Vulnerability Detected in '_handleAction' at line [61].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['params']V4Router._swapExactInputSingle(IV4Router.ExactInputSingleParams) (lib/v4-periphery/src/V4Router.sol#81-90) Sandwich Vulnerability Detected in '_swapExactInputSingle' at line [89].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['params']V4Router._swapExactInput(IV4Router.ExactInputParams) (lib/v4-periphery/src/V4Router.sol#92-114) Sandwich Vulnerability Detected in '_swapExactInput' at line [112].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['params']V4Router._swapExactOutputSingle(IV4Router.ExactOutputSingleParams) (lib/v4-periphery/src/V4Router.sol#116-126) Sandwich Vulnerability Detected in '_swapExactOutputSingle' at line [125].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['params']V4Router._swapExactOutput(IV4Router.ExactOutputParams) (lib/v4-periphery/src/V4Router.sol#128-153) Sandwich Vulnerability Detected in '_swapExactOutput' at line [151].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['params']Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Vulnerability Detected in 'sweep' at line [61].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['token', 'amountMinimum']Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Vulnerability Detected in 'sweep' at line [62].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['token']Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Vulnerability Detected in 'sweep' at line [65].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['token', 'amountMinimum']Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Vulnerability Detected in 'sweep' at line [66].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['token']Payments.wrapETH(address,uint256) (modules/Payments.sol#73-85) Sandwich Vulnerability Detected in 'wrapETH' at line [76].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['amount']Payments.wrapETH(address,uint256) (modules/Payments.sol#73-85) Sandwich Vulnerability Detected in 'wrapETH' at line [79].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['amount']Payments.unwrapWETH9(address,uint256) (modules/Payments.sol#90-101) Sandwich Vulnerability Detected in 'unwrapWETH9' at line [92].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['amountMinimum']V2SwapRouter.v2SwapExactInput(address,uint256,uint256,address[],address) (modules/uniswap/v2/V2SwapRouter.sol#52-74) Sandwich Vulnerability Detected in 'v2SwapExactInput' at line [73].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['recipient', 'amountOutMinimum', 'path']V3SwapRouter.v3SwapExactInput(address,uint256,uint256,bytes,address) (modules/uniswap/v3/V3SwapRouter.sol#71-110) Sandwich Vulnerability Detected in 'v3SwapExactInput' at line [109].
-	- Logic: Inequality comparison (<, >) detected.
-	- Compares Active Source (Swap/Balance) against User Input ['recipient', 'amountOutMinimum', 'path', 'amountIn', 'payer']Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#generic-slippage
+Detector: static-sandwich
+DeltaResolver._mapWrapUnwrapAmount(Currency,uint256,Currency) (lib/v4-periphery/src/base/DeltaResolver.sol#102-122) Sandwich Opportunity Detected in '_mapWrapUnwrapAmount' at line [120].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['amount', 'inputCurrency', 'outputCurrency']V4Router._handleAction(uint256,bytes) (lib/v4-periphery/src/V4Router.sol#31-79) Sandwich Opportunity Detected in '_handleAction' at line [55].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['params']V4Router._handleAction(uint256,bytes) (lib/v4-periphery/src/V4Router.sol#31-79) Sandwich Opportunity Detected in '_handleAction' at line [61].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['params']V4Router._swapExactInputSingle(IV4Router.ExactInputSingleParams) (lib/v4-periphery/src/V4Router.sol#81-90) Sandwich Opportunity Detected in '_swapExactInputSingle' at line [89].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['params']V4Router._swapExactInput(IV4Router.ExactInputParams) (lib/v4-periphery/src/V4Router.sol#92-114) Sandwich Opportunity Detected in '_swapExactInput' at line [112].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['params']V4Router._swapExactOutputSingle(IV4Router.ExactOutputSingleParams) (lib/v4-periphery/src/V4Router.sol#116-126) Sandwich Opportunity Detected in '_swapExactOutputSingle' at line [125].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['params']V4Router._swapExactOutput(IV4Router.ExactOutputParams) (lib/v4-periphery/src/V4Router.sol#128-153) Sandwich Opportunity Detected in '_swapExactOutput' at line [151].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['params']Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Opportunity Detected in 'sweep' at line [61].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['token', 'amountMinimum']Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Opportunity Detected in 'sweep' at line [62].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['token']Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Opportunity Detected in 'sweep' at line [65].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['token', 'amountMinimum']Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Opportunity Detected in 'sweep' at line [66].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['token']Payments.wrapETH(address,uint256) (modules/Payments.sol#73-85) Sandwich Opportunity Detected in 'wrapETH' at line [76].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['amount']Payments.wrapETH(address,uint256) (modules/Payments.sol#73-85) Sandwich Opportunity Detected in 'wrapETH' at line [79].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['amount']Payments.unwrapWETH9(address,uint256) (modules/Payments.sol#90-101) Sandwich Opportunity Detected in 'unwrapWETH9' at line [92].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['amountMinimum']V2SwapRouter.v2SwapExactInput(address,uint256,uint256,address[],address) (modules/uniswap/v2/V2SwapRouter.sol#52-74) Sandwich Opportunity Detected in 'v2SwapExactInput' at line [73].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['recipient', 'path', 'amountOutMinimum']V3SwapRouter.v3SwapExactInput(address,uint256,uint256,bytes,address) (modules/uniswap/v3/V3SwapRouter.sol#71-110) Sandwich Opportunity Detected in 'v3SwapExactInput' at line [109].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['amountOutMinimum', 'recipient', 'path', 'amountIn', 'payer']Reference: https://github.com/lesc-ufv/static-sandwich-mev-detector
 . analyzed (91 contracts with 1 detectors), 16 result(s) found
+INFO:Slither:output.json exists already, the overwrite is prevented
