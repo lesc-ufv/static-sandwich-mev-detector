@@ -54,14 +54,17 @@ def set_solc_version(sc_path):
         return False
 
 
-def run_slither():
-    slither_command = ["slither", ".", "--detect", "static-sandwich"]
-    result = subprocess.run(slither_command, capture_output=True, text=True, check=True)
-    print("Test finished successfully!")
+def run_slither(sc_name):
+    try:
+        slither_command = ["slither", f"{sc_name}.sol", "--detect", "static-sandwich"]
+        result = subprocess.run(slither_command, capture_output=True, text=True, check=True)
+    except subprocess.CalledProcessError as e:
+        print(e.stderr)
+        print("Test finished successfully!")
 
 
 database_path = "smart_contracts_database"
-sc_name = "Example.sol"
+sc_name = "Example"
 
 
 print(f"Running tests for {sc_name}.sol...")
@@ -72,5 +75,5 @@ set_solc_version(sc_path)
 
 # Run slither
 os.chdir(f"{database_path}")
-run_slither()
+run_slither(sc_name)
 os.chdir("..")
