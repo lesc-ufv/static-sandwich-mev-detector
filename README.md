@@ -18,6 +18,7 @@ O repositório está organizado da seguinte forma:
 * `requirements.txt`: Lista de dependências Python necessárias.
 * `run_tests.ipynb`: Notebook interativo para execução rápida de testes e visualização de resultados.
 * `setup.py`: Script de instalação do pacote do detector na ferramenta Slither.
+* `test.py`: Script de teste mínimo para verificação da instalação.
 
 # Selos Considerados
 
