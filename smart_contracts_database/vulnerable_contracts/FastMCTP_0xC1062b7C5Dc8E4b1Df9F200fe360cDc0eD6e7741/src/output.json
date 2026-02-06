@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [],
+        "description": "FastMCTP.getFeeAmounts(FastMCTP.OrderPayload,uint256,address) (FastMCTP.sol#497-512) Sandwich Vulnerability Detected in 'getFeeAmounts' at line [508].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['orderPayload', 'cctpAmount', 'localToken']",
+        "markdown": "[FastMCTP.getFeeAmounts(FastMCTP.OrderPayload,uint256,address)](FastMCTP.sol#L497-L512) Sandwich Vulnerability Detected in 'getFeeAmounts' at line [508].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['orderPayload', 'cctpAmount', 'localToken']",
+        "first_markdown_element": "",
+        "id": "1889a2ad626b293d16b01e63599e838d7208acdb4bb88de4d8f5f2915afda17a",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "FastMCTP.redeem(bytes,bytes) (FastMCTP.sol#188-242) Sandwich Vulnerability Detected in 'redeem' at line [221].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['cctpMsg']",
+        "markdown": "[FastMCTP.redeem(bytes,bytes)](FastMCTP.sol#L188-L242) Sandwich Vulnerability Detected in 'redeem' at line [221].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['cctpMsg']",
+        "first_markdown_element": "",
+        "id": "20bf1444979f814fb1e0826dab8395e2f97735028daa2a87c8b1c82b0a62b367",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "FastMCTP.fulfillOrder(bytes,bytes,address,bytes) (FastMCTP.sol#244-327) Sandwich Vulnerability Detected in 'fulfillOrder' at line [322].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['cctpMsg']",
+        "markdown": "[FastMCTP.fulfillOrder(bytes,bytes,address,bytes)](FastMCTP.sol#L244-L327) Sandwich Vulnerability Detected in 'fulfillOrder' at line [322].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['cctpMsg']",
+        "first_markdown_element": "",
+        "id": "73e1b664c8e2924a8be78a31bee4327ee1b89345a6667b062cced35b3c7fc7a3",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "FastMCTP.redeem(bytes,bytes) (FastMCTP.sol#188-242) Sandwich Vulnerability Detected in 'redeem' at line [231].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['cctpMsg']",
+        "markdown": "[FastMCTP.redeem(bytes,bytes)](FastMCTP.sol#L188-L242) Sandwich Vulnerability Detected in 'redeem' at line [231].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['cctpMsg']",
+        "first_markdown_element": "",
+        "id": "db5d63cacc8fe8a7e5bf4fab0a9522368c520a2c3e124430e7d455e37adc0b5d",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "FastMCTP.refund(bytes,bytes) (FastMCTP.sol#329-358) Sandwich Vulnerability Detected in 'refund' at line [350].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['cctpMsg']",
+        "markdown": "[FastMCTP.refund(bytes,bytes)](FastMCTP.sol#L329-L358) Sandwich Vulnerability Detected in 'refund' at line [350].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['cctpMsg']",
+        "first_markdown_element": "",
+        "id": "fce2c06f36c0c7997ec5ad4393d55c4815a67e6e3ead3fecb8c9a288cacc3084",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      }
+    ]
+  }
+}

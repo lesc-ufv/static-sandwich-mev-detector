@@ -1,0 +1,11 @@
+'solc --version' running
+'solc ./GnosisSafe.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --metadata-hash ipfs --metadata-literal --evm-version istanbul --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/GnosisSafe_0x67e254c61b3Fc5F5eD92f3004063b21CD0B46B6b/src' running
+Compilation warnings/errors on ./GnosisSafe.sol:
+Warning: Function state mutability can be restricted to pure
+   --> ./GnosisSafe.sol:340:5:
+    |
+340 |     function getChainId() public view returns (uint256) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+. analyzed (17 contracts with 1 detectors), 0 result(s) found

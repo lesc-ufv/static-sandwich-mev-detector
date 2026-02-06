@@ -1,0 +1,3 @@
+'solc --version' running
+'solc ./StakingPool.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/StakingPool_0x29403B1AC2B745c806e4d4988e4C1B6F4c119b95/src' running
+. analyzed (24 contracts with 1 detectors), 0 result(s) found

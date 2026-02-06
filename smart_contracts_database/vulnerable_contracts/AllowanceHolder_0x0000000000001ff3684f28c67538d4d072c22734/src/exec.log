@@ -1,0 +1,29 @@
+'solc --version' running
+'solc ./TransientStorage.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 1000000 --metadata-hash none --no-cbor-metadata --evm-version cancun --via-ir --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/AllowanceHolder_0x0000000000001ff3684f28c67538d4d072c22734/src' running
+Compilation warnings/errors on ./TransientStorage.sol:
+Warning: Transient storage as defined by EIP-1153 can break the composability of smart contracts: Since transient storage is cleared only at the end of the transaction and not at the end of the outermost call frame to the contract within a transaction, your contract may unintentionally misbehave when invoked multiple times in a complex transaction. To avoid this, be sure to clear all transient storage at the end of any call to your contract. The use of transient storage for reentrancy guards that are cleared at the end of the call is safe.
+  --> TransientStorage.sol:15:13:
+   |
+15 |             tstore(s, v)
+   |             ^^^^^^
+
+
+'solc --version' running
+'solc ./AllowanceHolder.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 1000000 --metadata-hash none --no-cbor-metadata --evm-version cancun --via-ir --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/AllowanceHolder_0x0000000000001ff3684f28c67538d4d072c22734/src' running
+Compilation warnings/errors on ./AllowanceHolder.sol:
+Warning: Transient storage as defined by EIP-1153 can break the composability of smart contracts: Since transient storage is cleared only at the end of the transaction and not at the end of the outermost call frame to the contract within a transaction, your contract may unintentionally misbehave when invoked multiple times in a complex transaction. To avoid this, be sure to clear all transient storage at the end of any call to your contract. The use of transient storage for reentrancy guards that are cleared at the end of the call is safe.
+  --> TransientStorage.sol:15:13:
+   |
+15 |             tstore(s, v)
+   |             ^^^^^^
+
+
+'solc --version' running
+'solc ./TransientStorageBase.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 1000000 --metadata-hash none --no-cbor-metadata --evm-version cancun --via-ir --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/AllowanceHolder_0x0000000000001ff3684f28c67538d4d072c22734/src' running
+'solc --version' running
+'solc ./AllowanceHolderBase.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 1000000 --metadata-hash none --no-cbor-metadata --evm-version cancun --via-ir --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/AllowanceHolder_0x0000000000001ff3684f28c67538d4d072c22734/src' running
+'solc --version' running
+'solc ./IAllowanceHolder.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 1000000 --metadata-hash none --no-cbor-metadata --evm-version cancun --via-ir --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/AllowanceHolder_0x0000000000001ff3684f28c67538d4d072c22734/src' running
+'solc --version' running
+'solc ./TransientStorageLayout.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 1000000 --metadata-hash none --no-cbor-metadata --evm-version cancun --via-ir --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/AllowanceHolder_0x0000000000001ff3684f28c67538d4d072c22734/src' running
+. analyzed (26 contracts with 1 detectors), 0 result(s) found

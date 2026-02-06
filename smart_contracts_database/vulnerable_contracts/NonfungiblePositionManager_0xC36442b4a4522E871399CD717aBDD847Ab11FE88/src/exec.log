@@ -1,0 +1,10 @@
+'solc --version' running
+'solc ./NonfungiblePositionManager.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --optimize --optimize-runs 2000 --metadata-hash none --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/NonfungiblePositionManager_0xC36442b4a4522E871399CD717aBDD847Ab11FE88/src' running
+
+Detector: generic-slippage
+PeripheryPayments.sweepToken(address,uint256,address) (base/PeripheryPayments.sol#30-41) Sandwich Vulnerability Detected in 'sweepToken' at line [38].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['token']LiquidityAmounts.getLiquidityForAmounts(uint160,uint160,uint160,uint256,uint256) (libraries/LiquidityAmounts.sol#56-75) Sandwich Vulnerability Detected in 'getLiquidityForAmounts' at line [71].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['sqrtRatioAX96', 'amount0', 'sqrtRatioX96', 'sqrtRatioBX96', 'amount1']Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#generic-slippage
+. analyzed (55 contracts with 1 detectors), 2 result(s) found

@@ -1,0 +1,6 @@
+venv/
+*.xlsx
+*.xlsx#
+*.egg-info/
+__pycache__/
+*.pdf

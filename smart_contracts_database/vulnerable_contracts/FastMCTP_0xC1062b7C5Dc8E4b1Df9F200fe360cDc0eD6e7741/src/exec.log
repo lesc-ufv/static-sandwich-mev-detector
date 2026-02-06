@@ -1,0 +1,24 @@
+'solc --version' running
+'solc ./FastMCTP.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 1000 --no-optimize-yul --metadata-hash none --via-ir --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/FastMCTP_0xC1062b7C5Dc8E4b1Df9F200fe360cDc0eD6e7741/src' running
+Compilation warnings/errors on ./FastMCTP.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> interfaces/CCTP/ITokenMinter.sol
+
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> interfaces/CCTP/IReceiver.sol
+
+
+
+Detector: generic-slippage
+FastMCTP.redeem(bytes,bytes) (FastMCTP.sol#188-242) Sandwich Vulnerability Detected in 'redeem' at line [231].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['cctpMsg']FastMCTP.redeem(bytes,bytes) (FastMCTP.sol#188-242) Sandwich Vulnerability Detected in 'redeem' at line [221].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['cctpMsg']FastMCTP.fulfillOrder(bytes,bytes,address,bytes) (FastMCTP.sol#244-327) Sandwich Vulnerability Detected in 'fulfillOrder' at line [322].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['cctpMsg']FastMCTP.refund(bytes,bytes) (FastMCTP.sol#329-358) Sandwich Vulnerability Detected in 'refund' at line [350].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['cctpMsg']FastMCTP.getFeeAmounts(FastMCTP.OrderPayload,uint256,address) (FastMCTP.sol#497-512) Sandwich Vulnerability Detected in 'getFeeAmounts' at line [508].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['orderPayload', 'cctpAmount', 'localToken']Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#generic-slippage
+. analyzed (15 contracts with 1 detectors), 5 result(s) found

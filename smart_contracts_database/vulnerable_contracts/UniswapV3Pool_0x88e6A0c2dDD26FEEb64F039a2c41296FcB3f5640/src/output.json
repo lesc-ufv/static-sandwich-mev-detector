@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [],
+        "description": "UniswapV3Pool.swap(address,bool,int256,uint160,bytes) (UniswapV3Pool.sol#596-788) Sandwich Vulnerability Detected in 'swap' at line [779].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'sqrtPriceLimitX96', 'zeroForOne']",
+        "markdown": "[UniswapV3Pool.swap(address,bool,int256,uint160,bytes)](UniswapV3Pool.sol#L596-L788) Sandwich Vulnerability Detected in 'swap' at line [779].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'sqrtPriceLimitX96', 'zeroForOne']",
+        "first_markdown_element": "",
+        "id": "baa6a029fbd5687f7c696276165d2a1c868e1024ccb9d6cd3d8e8455f3fd2376",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "UniswapV3Pool.swap(address,bool,int256,uint160,bytes) (UniswapV3Pool.sol#596-788) Sandwich Vulnerability Detected in 'swap' at line [773].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'sqrtPriceLimitX96', 'zeroForOne']",
+        "markdown": "[UniswapV3Pool.swap(address,bool,int256,uint160,bytes)](UniswapV3Pool.sol#L596-L788) Sandwich Vulnerability Detected in 'swap' at line [773].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'sqrtPriceLimitX96', 'zeroForOne']",
+        "first_markdown_element": "",
+        "id": "dab86f9d643df0b0e0615e6c9f236ec2454a2b37c00897d457bda8aac9dbd88f",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "UniswapV3Pool.swap(address,bool,int256,uint160,bytes) (UniswapV3Pool.sol#596-788) Sandwich Vulnerability Detected in 'swap' at line [655].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'sqrtPriceLimitX96', 'zeroForOne']",
+        "markdown": "[UniswapV3Pool.swap(address,bool,int256,uint160,bytes)](UniswapV3Pool.sol#L596-L788) Sandwich Vulnerability Detected in 'swap' at line [655].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'sqrtPriceLimitX96', 'zeroForOne']",
+        "first_markdown_element": "",
+        "id": "ec314061481be001466e6141f8d29dd5ee179d50effb9c76128fa57eae34c023",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "UniswapV3Pool.swap(address,bool,int256,uint160,bytes) (UniswapV3Pool.sol#596-788) Sandwich Vulnerability Detected in 'swap' at line [653].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'sqrtPriceLimitX96', 'zeroForOne']",
+        "markdown": "[UniswapV3Pool.swap(address,bool,int256,uint160,bytes)](UniswapV3Pool.sol#L596-L788) Sandwich Vulnerability Detected in 'swap' at line [653].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amountSpecified', 'sqrtPriceLimitX96', 'zeroForOne']",
+        "first_markdown_element": "",
+        "id": "f755737c86bd23fe8a6c68f75fa14a42900c4beb4b8b0089b934ee08c4b50bad",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+'solc --version' running
+'solc ./UniversalRouter.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --via-ir --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/UniversalRouter_0x66a9893cc07d91d95644aedd05d03f95e1dba8af/src' running
+Compilation warnings/errors on ./UniversalRouter.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> v2-core/contracts/interfaces/IUniswapV2Pair.sol
+
+Warning: Transient storage as defined by EIP-1153 can break the composability of smart contracts: Since transient storage is cleared only at the end of the transaction and not at the end of the outermost call frame to the contract within a transaction, your contract may unintentionally misbehave when invoked multiple times in a complex transaction. To avoid this, be sure to clear all transient storage at the end of any call to your contract. The use of transient storage for reentrancy guards that are cleared at the end of the call is safe.
+  --> libraries/MaxInputAmount.sol:11:13:
+   |
+11 |             tstore(MAX_AMOUNT_IN_SLOT, maxAmountIn)
+   |             ^^^^^^
+
+
+Impossible to generate IR for UniversalRouter.uniswapV3SwapCallback (modules/uniswap/v3/V3SwapRouter.sol#35-63):
+ 'NoneType' object has no attribute 'parameters'
+Impossible to generate IR for UniversalRouter.v3SwapExactInput (modules/uniswap/v3/V3SwapRouter.sol#71-110):
+ 'NoneType' object has no attribute 'parameters'
+Impossible to generate IR for UniversalRouter._swap (modules/uniswap/v3/V3SwapRouter.sol#138-153):
+ 'NoneType' object has no attribute 'parameters'
+Impossible to generate IR for Dispatcher.uniswapV3SwapCallback (modules/uniswap/v3/V3SwapRouter.sol#35-63):
+ 'NoneType' object has no attribute 'parameters'
+Impossible to generate IR for Dispatcher.v3SwapExactInput (modules/uniswap/v3/V3SwapRouter.sol#71-110):
+ 'NoneType' object has no attribute 'parameters'
+Impossible to generate IR for Dispatcher._swap (modules/uniswap/v3/V3SwapRouter.sol#138-153):
+ 'NoneType' object has no attribute 'parameters'
+
+Detector: generic-slippage
+DeltaResolver._mapWrapUnwrapAmount(Currency,uint256,Currency) (lib/v4-periphery/src/base/DeltaResolver.sol#102-122) Sandwich Vulnerability Detected in '_mapWrapUnwrapAmount' at line [120].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['inputCurrency', 'amount', 'outputCurrency']V4Router._handleAction(uint256,bytes) (lib/v4-periphery/src/V4Router.sol#31-79) Sandwich Vulnerability Detected in '_handleAction' at line [55].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['params']V4Router._handleAction(uint256,bytes) (lib/v4-periphery/src/V4Router.sol#31-79) Sandwich Vulnerability Detected in '_handleAction' at line [61].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['params']V4Router._swapExactInputSingle(IV4Router.ExactInputSingleParams) (lib/v4-periphery/src/V4Router.sol#81-90) Sandwich Vulnerability Detected in '_swapExactInputSingle' at line [89].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['params']V4Router._swapExactInput(IV4Router.ExactInputParams) (lib/v4-periphery/src/V4Router.sol#92-114) Sandwich Vulnerability Detected in '_swapExactInput' at line [112].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['params']V4Router._swapExactOutputSingle(IV4Router.ExactOutputSingleParams) (lib/v4-periphery/src/V4Router.sol#116-126) Sandwich Vulnerability Detected in '_swapExactOutputSingle' at line [125].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['params']V4Router._swapExactOutput(IV4Router.ExactOutputParams) (lib/v4-periphery/src/V4Router.sol#128-153) Sandwich Vulnerability Detected in '_swapExactOutput' at line [151].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['params']Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Vulnerability Detected in 'sweep' at line [61].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['token', 'amountMinimum']Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Vulnerability Detected in 'sweep' at line [62].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['token']Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Vulnerability Detected in 'sweep' at line [65].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['token', 'amountMinimum']Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Vulnerability Detected in 'sweep' at line [66].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['token']Payments.wrapETH(address,uint256) (modules/Payments.sol#73-85) Sandwich Vulnerability Detected in 'wrapETH' at line [76].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['amount']Payments.wrapETH(address,uint256) (modules/Payments.sol#73-85) Sandwich Vulnerability Detected in 'wrapETH' at line [79].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['amount']Payments.unwrapWETH9(address,uint256) (modules/Payments.sol#90-101) Sandwich Vulnerability Detected in 'unwrapWETH9' at line [92].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['amountMinimum']V2SwapRouter.v2SwapExactInput(address,uint256,uint256,address[],address) (modules/uniswap/v2/V2SwapRouter.sol#52-74) Sandwich Vulnerability Detected in 'v2SwapExactInput' at line [73].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['recipient', 'amountOutMinimum', 'path']V3SwapRouter.v3SwapExactInput(address,uint256,uint256,bytes,address) (modules/uniswap/v3/V3SwapRouter.sol#71-110) Sandwich Vulnerability Detected in 'v3SwapExactInput' at line [109].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['recipient', 'amountOutMinimum', 'path', 'amountIn', 'payer']Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#generic-slippage
+. analyzed (91 contracts with 1 detectors), 16 result(s) found

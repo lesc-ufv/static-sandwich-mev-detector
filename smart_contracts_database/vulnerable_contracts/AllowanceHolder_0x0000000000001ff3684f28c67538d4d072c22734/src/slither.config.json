@@ -1,0 +1,3 @@
+{
+  "solc_args": "--optimize --optimize-runs 1000000 --metadata-hash none --no-cbor-metadata --evm-version cancun --via-ir"
+}

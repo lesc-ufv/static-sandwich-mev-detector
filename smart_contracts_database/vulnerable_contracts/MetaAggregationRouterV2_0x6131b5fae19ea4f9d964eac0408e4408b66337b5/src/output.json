@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [],
+        "description": "MetaAggregationRouterV2._takeFee(IERC20,address,address[],uint256[],uint256,bool) (MetaAggregationRouterV2.sol#528-550) Sandwich Vulnerability Detected in '_takeFee' at line [538].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['from', 'totalAmount', 'recipients', 'token']",
+        "markdown": "[MetaAggregationRouterV2._takeFee(IERC20,address,address[],uint256[],uint256,bool)](MetaAggregationRouterV2.sol#L528-L550) Sandwich Vulnerability Detected in '_takeFee' at line [538].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['from', 'totalAmount', 'recipients', 'token']",
+        "first_markdown_element": "",
+        "id": "a805db921ba186d7ac3f8197550b968989356ee371d18e9fc3bfeff045df1b88",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      }
+    ]
+  }
+}

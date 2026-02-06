@@ -1,0 +1,11 @@
+'solc --version' running
+'solc ./UniswapV2Router02.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/UniswapV2Router02_0x7a250d5630b4cf539739df2c5dacb4c659f2488d/src' running
+Compilation warnings/errors on ./UniswapV2Router02.sol:
+Warning: Contract code size exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.
+   --> ./UniswapV2Router02.sol:227:1:
+    |
+227 | contract UniswapV2Router02 is IUniswapV2Router02 {
+    | ^ (Relevant source part starts here and spans across multiple lines).
+
+
+. analyzed (10 contracts with 1 detectors), 0 result(s) found

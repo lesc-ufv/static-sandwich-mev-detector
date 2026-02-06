@@ -1,0 +1,3 @@
+{
+  "solc_args": "--optimize --optimize-runs 200 --via-ir"
+}

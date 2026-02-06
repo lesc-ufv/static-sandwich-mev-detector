@@ -1,0 +1,88 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [],
+        "description": "Math.sqrt(uint256,Math.Rounding) (AggregationRouterV6.sol#2730-2735) Sandwich Vulnerability Detected in 'sqrt' at line [2733].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['rounding', 'a']",
+        "markdown": "[Math.sqrt(uint256,Math.Rounding)](AggregationRouterV6.sol#L2730-L2735) Sandwich Vulnerability Detected in 'sqrt' at line [2733].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['rounding', 'a']",
+        "first_markdown_element": "",
+        "id": "120769c02297c4f111ac2d3ac8ae79906fb25f2b9c9ec0600c7465dd2b4e048b",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes) (AggregationRouterV6.sol#4758-4805) Sandwich Vulnerability Detected in 'swap' at line [4792].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['desc']",
+        "markdown": "[GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes)](AggregationRouterV6.sol#L4758-L4805) Sandwich Vulnerability Detected in 'swap' at line [4792].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['desc']",
+        "first_markdown_element": "",
+        "id": "5bc1fd6758412f78a122e3b95f6d8399d2a1d36aafd6ebe4963d5d3a8238a072",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "Math.log10(uint256,Math.Rounding) (AggregationRouterV6.sol#2832-2837) Sandwich Vulnerability Detected in 'log10' at line [2835].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['value', 'rounding']",
+        "markdown": "[Math.log10(uint256,Math.Rounding)](AggregationRouterV6.sol#L2832-L2837) Sandwich Vulnerability Detected in 'log10' at line [2835].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['value', 'rounding']",
+        "first_markdown_element": "",
+        "id": "6ba0ba6305bcf7eb024dd12f7605794ad401f32f5ea83b6e04f7f8ba894f82c0",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes) (AggregationRouterV6.sol#4758-4805) Sandwich Vulnerability Detected in 'swap' at line [4798].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['desc']",
+        "markdown": "[GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes)](AggregationRouterV6.sol#L4758-L4805) Sandwich Vulnerability Detected in 'swap' at line [4798].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['desc']",
+        "first_markdown_element": "",
+        "id": "91380010481e5dbad1c04b768a676e77a8b3449d4c0a8397c2c0fb922034fbc8",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "UnoswapRouter._curfe(address,uint256,uint256,Address) (AggregationRouterV6.sol#5390-5592) Sandwich Vulnerability Detected in '_curfe' at line [5591].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['minReturn', 'dex']",
+        "markdown": "[UnoswapRouter._curfe(address,uint256,uint256,Address)](AggregationRouterV6.sol#L5390-L5592) Sandwich Vulnerability Detected in '_curfe' at line [5591].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['minReturn', 'dex']",
+        "first_markdown_element": "",
+        "id": "a8cd429392996bca48aa6b43f368c56e2ce81b6dee960d8b019f3e536de14242",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes) (AggregationRouterV6.sol#4758-4805) Sandwich Vulnerability Detected in 'swap' at line [4800].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['desc']",
+        "markdown": "[GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes)](AggregationRouterV6.sol#L4758-L4805) Sandwich Vulnerability Detected in 'swap' at line [4800].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['desc']",
+        "first_markdown_element": "",
+        "id": "af97c6c273abcbd98a7e667fd7b95bc6939639cf47cd1bae1e59b1acd6fe5d50",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "Math.log2(uint256,Math.Rounding) (AggregationRouterV6.sol#2783-2788) Sandwich Vulnerability Detected in 'log2' at line [2786].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['value', 'rounding']",
+        "markdown": "[Math.log2(uint256,Math.Rounding)](AggregationRouterV6.sol#L2783-L2788) Sandwich Vulnerability Detected in 'log2' at line [2786].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['value', 'rounding']",
+        "first_markdown_element": "",
+        "id": "c2d5eee2c5886f2d682ac02a14a650abcd34c8d5e64c0bdecf5cc8bf0a5bcee2",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "Math.log256(uint256,Math.Rounding) (AggregationRouterV6.sol#2875-2880) Sandwich Vulnerability Detected in 'log256' at line [2878].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['value', 'rounding']",
+        "markdown": "[Math.log256(uint256,Math.Rounding)](AggregationRouterV6.sol#L2875-L2880) Sandwich Vulnerability Detected in 'log256' at line [2878].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['value', 'rounding']",
+        "first_markdown_element": "",
+        "id": "d3f350a06d931e5b8b8c1adfffd74b59e747cc44f36d5ff4ed2b590861ba8d14",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      }
+    ]
+  }
+}

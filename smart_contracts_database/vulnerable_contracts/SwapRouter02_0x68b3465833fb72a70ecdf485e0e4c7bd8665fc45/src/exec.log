@@ -1,0 +1,19 @@
+'solc --version' running
+'solc ./SwapRouter02.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --optimize --optimize-runs 1000000 --metadata-hash none --evm-version istanbul --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/SwapRouter02_0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45/src' running
+Compilation warnings/errors on ./SwapRouter02.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> ./@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol
+
+
+
+Detector: generic-slippage
+PeripheryPayments.sweepToken(address,uint256,address) (@uniswap/v3-periphery/contracts/base/PeripheryPayments.sol#30-41) Sandwich Vulnerability Detected in 'sweepToken' at line [38].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['token']PeripheryPaymentsWithFee.unwrapWETH9WithFee(uint256,address,uint256,address) (@uniswap/v3-periphery/contracts/base/PeripheryPaymentsWithFee.sol#17-34) Sandwich Vulnerability Detected in 'unwrapWETH9WithFee' at line [31].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['feeBips']PeripheryPaymentsWithFee.sweepTokenWithFee(address,uint256,address,uint256,address) (@uniswap/v3-periphery/contracts/base/PeripheryPaymentsWithFee.sol#37-54) Sandwich Vulnerability Detected in 'sweepTokenWithFee' at line [49].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['token']PeripheryPaymentsWithFee.sweepTokenWithFee(address,uint256,address,uint256,address) (@uniswap/v3-periphery/contracts/base/PeripheryPaymentsWithFee.sol#37-54) Sandwich Vulnerability Detected in 'sweepTokenWithFee' at line [51].
+	- Logic: Inequality comparison (<, >) detected.
+	- Compares Active Source (Swap/Balance) against User Input ['token', 'feeBips']Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#generic-slippage
+. analyzed (63 contracts with 1 detectors), 4 result(s) found

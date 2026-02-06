@@ -1,0 +1,168 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [],
+        "description": "V2SwapRouter.v2SwapExactInput(address,uint256,uint256,address[],address) (modules/uniswap/v2/V2SwapRouter.sol#52-74) Sandwich Vulnerability Detected in 'v2SwapExactInput' at line [73].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['recipient', 'amountOutMinimum', 'path']",
+        "markdown": "[V2SwapRouter.v2SwapExactInput(address,uint256,uint256,address[],address)](modules/uniswap/v2/V2SwapRouter.sol#L52-L74) Sandwich Vulnerability Detected in 'v2SwapExactInput' at line [73].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['recipient', 'amountOutMinimum', 'path']",
+        "first_markdown_element": "",
+        "id": "0b053961ac43959203e406302eb88c1af7d1f27a8e125129741f9311149827ee",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "Payments.wrapETH(address,uint256) (modules/Payments.sol#73-85) Sandwich Vulnerability Detected in 'wrapETH' at line [76].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amount']",
+        "markdown": "[Payments.wrapETH(address,uint256)](modules/Payments.sol#L73-L85) Sandwich Vulnerability Detected in 'wrapETH' at line [76].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amount']",
+        "first_markdown_element": "",
+        "id": "1576cc634d1423e6583943b203a42453ff0648bf32c91a182302ddca323af914",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Vulnerability Detected in 'sweep' at line [62].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "markdown": "[Payments.sweep(address,address,uint256)](modules/Payments.sol#L57-L68) Sandwich Vulnerability Detected in 'sweep' at line [62].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "first_markdown_element": "",
+        "id": "1a1f45c8abddf9b85ec5d0b8ba3ec4d57155f01dd5ebee7389160c12b4677528",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "V3SwapRouter.v3SwapExactInput(address,uint256,uint256,bytes,address) (modules/uniswap/v3/V3SwapRouter.sol#71-110) Sandwich Vulnerability Detected in 'v3SwapExactInput' at line [109].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['recipient', 'amountOutMinimum', 'path', 'amountIn', 'payer']",
+        "markdown": "[V3SwapRouter.v3SwapExactInput(address,uint256,uint256,bytes,address)](modules/uniswap/v3/V3SwapRouter.sol#L71-L110) Sandwich Vulnerability Detected in 'v3SwapExactInput' at line [109].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['recipient', 'amountOutMinimum', 'path', 'amountIn', 'payer']",
+        "first_markdown_element": "",
+        "id": "2ea617e3b01cc42522460b86975280fadeee274af10583c46cb63da1e7d030d0",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Vulnerability Detected in 'sweep' at line [61].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token', 'amountMinimum']",
+        "markdown": "[Payments.sweep(address,address,uint256)](modules/Payments.sol#L57-L68) Sandwich Vulnerability Detected in 'sweep' at line [61].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token', 'amountMinimum']",
+        "first_markdown_element": "",
+        "id": "2ef6d637460cf6661c9ada15216be207fca6844010f46c5d65a7f8e194e9b246",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "DeltaResolver._mapWrapUnwrapAmount(Currency,uint256,Currency) (lib/v4-periphery/src/base/DeltaResolver.sol#102-122) Sandwich Vulnerability Detected in '_mapWrapUnwrapAmount' at line [120].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['inputCurrency', 'amount', 'outputCurrency']",
+        "markdown": "[DeltaResolver._mapWrapUnwrapAmount(Currency,uint256,Currency)](lib/v4-periphery/src/base/DeltaResolver.sol#L102-L122) Sandwich Vulnerability Detected in '_mapWrapUnwrapAmount' at line [120].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['inputCurrency', 'amount', 'outputCurrency']",
+        "first_markdown_element": "",
+        "id": "53bc918894e1510e5adef8d38b1c5d95f29b059e7b474a804e5516e20c883491",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "Payments.unwrapWETH9(address,uint256) (modules/Payments.sol#90-101) Sandwich Vulnerability Detected in 'unwrapWETH9' at line [92].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amountMinimum']",
+        "markdown": "[Payments.unwrapWETH9(address,uint256)](modules/Payments.sol#L90-L101) Sandwich Vulnerability Detected in 'unwrapWETH9' at line [92].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amountMinimum']",
+        "first_markdown_element": "",
+        "id": "5cc47ee656dcac54a429d8f77356ba301266ff311a09581578052f70df23364d",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "V4Router._handleAction(uint256,bytes) (lib/v4-periphery/src/V4Router.sol#31-79) Sandwich Vulnerability Detected in '_handleAction' at line [61].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['params']",
+        "markdown": "[V4Router._handleAction(uint256,bytes)](lib/v4-periphery/src/V4Router.sol#L31-L79) Sandwich Vulnerability Detected in '_handleAction' at line [61].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['params']",
+        "first_markdown_element": "",
+        "id": "5dd1d3bed93f953e2aa7ea83ea5d91b5ceefba1c0e8f929d70c81035a053e04d",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "V4Router._swapExactOutput(IV4Router.ExactOutputParams) (lib/v4-periphery/src/V4Router.sol#128-153) Sandwich Vulnerability Detected in '_swapExactOutput' at line [151].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['params']",
+        "markdown": "[V4Router._swapExactOutput(IV4Router.ExactOutputParams)](lib/v4-periphery/src/V4Router.sol#L128-L153) Sandwich Vulnerability Detected in '_swapExactOutput' at line [151].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['params']",
+        "first_markdown_element": "",
+        "id": "5df20de191dae211d642480ffc89582feef76f6bb7f9b69282fc10007fe8489e",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "V4Router._swapExactInputSingle(IV4Router.ExactInputSingleParams) (lib/v4-periphery/src/V4Router.sol#81-90) Sandwich Vulnerability Detected in '_swapExactInputSingle' at line [89].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['params']",
+        "markdown": "[V4Router._swapExactInputSingle(IV4Router.ExactInputSingleParams)](lib/v4-periphery/src/V4Router.sol#L81-L90) Sandwich Vulnerability Detected in '_swapExactInputSingle' at line [89].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['params']",
+        "first_markdown_element": "",
+        "id": "6712a132a6309a21c46479b06221391c7bc09034c7f45392a145e55c13bfc891",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "Payments.wrapETH(address,uint256) (modules/Payments.sol#73-85) Sandwich Vulnerability Detected in 'wrapETH' at line [79].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amount']",
+        "markdown": "[Payments.wrapETH(address,uint256)](modules/Payments.sol#L73-L85) Sandwich Vulnerability Detected in 'wrapETH' at line [79].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amount']",
+        "first_markdown_element": "",
+        "id": "6eba797f9c47ad453ddbdecff98a452c03e9a85bd559a4cb64dca503ff913acf",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "V4Router._swapExactInput(IV4Router.ExactInputParams) (lib/v4-periphery/src/V4Router.sol#92-114) Sandwich Vulnerability Detected in '_swapExactInput' at line [112].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['params']",
+        "markdown": "[V4Router._swapExactInput(IV4Router.ExactInputParams)](lib/v4-periphery/src/V4Router.sol#L92-L114) Sandwich Vulnerability Detected in '_swapExactInput' at line [112].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['params']",
+        "first_markdown_element": "",
+        "id": "7b5078fefa7972ea66c66dce43ef1e1667da3a4eb431c330b9bfaa24b63ef253",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Vulnerability Detected in 'sweep' at line [65].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token', 'amountMinimum']",
+        "markdown": "[Payments.sweep(address,address,uint256)](modules/Payments.sol#L57-L68) Sandwich Vulnerability Detected in 'sweep' at line [65].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token', 'amountMinimum']",
+        "first_markdown_element": "",
+        "id": "9ad0b57a8cd51fc5bcf48023e3ffb06eb2155d54a82fbe7fbd1b24fde51751d1",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "V4Router._handleAction(uint256,bytes) (lib/v4-periphery/src/V4Router.sol#31-79) Sandwich Vulnerability Detected in '_handleAction' at line [55].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['params']",
+        "markdown": "[V4Router._handleAction(uint256,bytes)](lib/v4-periphery/src/V4Router.sol#L31-L79) Sandwich Vulnerability Detected in '_handleAction' at line [55].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['params']",
+        "first_markdown_element": "",
+        "id": "b3e09422cd8db70f17bf59ed77ba5a3637c945ff2501dd1d9cc85be36b02e279",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "Payments.sweep(address,address,uint256) (modules/Payments.sol#57-68) Sandwich Vulnerability Detected in 'sweep' at line [66].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "markdown": "[Payments.sweep(address,address,uint256)](modules/Payments.sol#L57-L68) Sandwich Vulnerability Detected in 'sweep' at line [66].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "first_markdown_element": "",
+        "id": "cb0629828c7252716221f7acc88e46cc5f4e7fcec46dedd7fa70ad9a4f0f66be",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "V4Router._swapExactOutputSingle(IV4Router.ExactOutputSingleParams) (lib/v4-periphery/src/V4Router.sol#116-126) Sandwich Vulnerability Detected in '_swapExactOutputSingle' at line [125].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['params']",
+        "markdown": "[V4Router._swapExactOutputSingle(IV4Router.ExactOutputSingleParams)](lib/v4-periphery/src/V4Router.sol#L116-L126) Sandwich Vulnerability Detected in '_swapExactOutputSingle' at line [125].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['params']",
+        "first_markdown_element": "",
+        "id": "f27835570334fd04bdbb6dafe8bbfa56a76cf62ad0864507c614529d1dcb0563",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      }
+    ]
+  }
+}

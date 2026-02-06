@@ -1,0 +1,3 @@
+{
+  "solc_args": "--optimize --optimize-runs 800 --no-optimize-yul --metadata-hash none"
+}

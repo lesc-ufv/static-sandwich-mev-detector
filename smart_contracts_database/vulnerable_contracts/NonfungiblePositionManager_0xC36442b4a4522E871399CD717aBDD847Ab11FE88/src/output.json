@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [],
+        "description": "PeripheryPayments.sweepToken(address,uint256,address) (base/PeripheryPayments.sol#30-41) Sandwich Vulnerability Detected in 'sweepToken' at line [38].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "markdown": "[PeripheryPayments.sweepToken(address,uint256,address)](base/PeripheryPayments.sol#L30-L41) Sandwich Vulnerability Detected in 'sweepToken' at line [38].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "first_markdown_element": "",
+        "id": "1f498f3850c549ee8f2707b3a8fd7611f84d8d0a377d02997ba42c793851e9c5",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "LiquidityAmounts.getLiquidityForAmounts(uint160,uint160,uint160,uint256,uint256) (libraries/LiquidityAmounts.sol#56-75) Sandwich Vulnerability Detected in 'getLiquidityForAmounts' at line [71].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['sqrtRatioAX96', 'amount0', 'sqrtRatioX96', 'sqrtRatioBX96', 'amount1']",
+        "markdown": "[LiquidityAmounts.getLiquidityForAmounts(uint160,uint160,uint160,uint256,uint256)](libraries/LiquidityAmounts.sol#L56-L75) Sandwich Vulnerability Detected in 'getLiquidityForAmounts' at line [71].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['sqrtRatioAX96', 'amount0', 'sqrtRatioX96', 'sqrtRatioBX96', 'amount1']",
+        "first_markdown_element": "",
+        "id": "d35b7b1422e1bc7d26e841f8df5accb2e37d894042d70c08c7f8a1021c26408b",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      }
+    ]
+  }
+}

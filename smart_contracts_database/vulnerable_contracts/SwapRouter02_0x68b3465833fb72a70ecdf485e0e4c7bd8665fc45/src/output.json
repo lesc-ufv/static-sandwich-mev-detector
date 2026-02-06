@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [],
+        "description": "PeripheryPayments.sweepToken(address,uint256,address) (@uniswap/v3-periphery/contracts/base/PeripheryPayments.sol#30-41) Sandwich Vulnerability Detected in 'sweepToken' at line [38].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "markdown": "[PeripheryPayments.sweepToken(address,uint256,address)](@uniswap/v3-periphery/contracts/base/PeripheryPayments.sol#L30-L41) Sandwich Vulnerability Detected in 'sweepToken' at line [38].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "first_markdown_element": "",
+        "id": "1f498f3850c549ee8f2707b3a8fd7611f84d8d0a377d02997ba42c793851e9c5",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "PeripheryPaymentsWithFee.sweepTokenWithFee(address,uint256,address,uint256,address) (@uniswap/v3-periphery/contracts/base/PeripheryPaymentsWithFee.sol#37-54) Sandwich Vulnerability Detected in 'sweepTokenWithFee' at line [51].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token', 'feeBips']",
+        "markdown": "[PeripheryPaymentsWithFee.sweepTokenWithFee(address,uint256,address,uint256,address)](@uniswap/v3-periphery/contracts/base/PeripheryPaymentsWithFee.sol#L37-L54) Sandwich Vulnerability Detected in 'sweepTokenWithFee' at line [51].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token', 'feeBips']",
+        "first_markdown_element": "",
+        "id": "7b12f0242ef682d9bd361d61ddc1661714bb9f6551cba809744eca862f3df901",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "PeripheryPaymentsWithFee.sweepTokenWithFee(address,uint256,address,uint256,address) (@uniswap/v3-periphery/contracts/base/PeripheryPaymentsWithFee.sol#37-54) Sandwich Vulnerability Detected in 'sweepTokenWithFee' at line [49].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "markdown": "[PeripheryPaymentsWithFee.sweepTokenWithFee(address,uint256,address,uint256,address)](@uniswap/v3-periphery/contracts/base/PeripheryPaymentsWithFee.sol#L37-L54) Sandwich Vulnerability Detected in 'sweepTokenWithFee' at line [49].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "first_markdown_element": "",
+        "id": "91c9cbf7ff8a0f8b421f0025353f51e4a48a7ebb1a75a7d2a4f0d912cc39ae6a",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "PeripheryPaymentsWithFee.unwrapWETH9WithFee(uint256,address,uint256,address) (@uniswap/v3-periphery/contracts/base/PeripheryPaymentsWithFee.sol#17-34) Sandwich Vulnerability Detected in 'unwrapWETH9WithFee' at line [31].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['feeBips']",
+        "markdown": "[PeripheryPaymentsWithFee.unwrapWETH9WithFee(uint256,address,uint256,address)](@uniswap/v3-periphery/contracts/base/PeripheryPaymentsWithFee.sol#L17-L34) Sandwich Vulnerability Detected in 'unwrapWETH9WithFee' at line [31].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['feeBips']",
+        "first_markdown_element": "",
+        "id": "ea51008c5f43711adebb0aab9186aeffeeff56c2166379609259d273661fec03",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      }
+    ]
+  }
+}

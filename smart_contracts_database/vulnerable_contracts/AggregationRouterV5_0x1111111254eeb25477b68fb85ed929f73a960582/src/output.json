@@ -1,0 +1,138 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [],
+        "description": "OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4526].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'interaction', 'takingAmount', 'order_']",
+        "markdown": "[OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address)](AggregationRouterV5.sol#L4417-L4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4526].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'interaction', 'takingAmount', 'order_']",
+        "first_markdown_element": "",
+        "id": "05371c06fe851f6f5f3bce1a778108fb3c669eb1b431afbe897e59493db4d3dd",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes,bytes) (AggregationRouterV5.sol#973-1028) Sandwich Vulnerability Detected in 'swap' at line [1023].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['desc']",
+        "markdown": "[GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes,bytes)](AggregationRouterV5.sol#L973-L1028) Sandwich Vulnerability Detected in 'swap' at line [1023].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['desc']",
+        "first_markdown_element": "",
+        "id": "092e0315dae0bbefe45b2b9142df56aa39ff9b2937f0cc6c820070091743e6cf",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4471].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'takingAmount', 'order_']",
+        "markdown": "[OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address)](AggregationRouterV5.sol#L4417-L4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4471].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'takingAmount', 'order_']",
+        "first_markdown_element": "",
+        "id": "4aabdbda02586ef47edf08aaa4eea774dd6369e0205ed089ccb701610830b9d8",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes,bytes) (AggregationRouterV5.sol#973-1028) Sandwich Vulnerability Detected in 'swap' at line [1015].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['desc']",
+        "markdown": "[GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes,bytes)](AggregationRouterV5.sol#L973-L1028) Sandwich Vulnerability Detected in 'swap' at line [1015].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['desc']",
+        "first_markdown_element": "",
+        "id": "52941ae4810b43ff2487dca430995a81614f5c2216611403b2f9d6ffa3b3b2c3",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "UnoswapRouter._unoswap(address,IERC20,uint256,uint256,uint256[]) (AggregationRouterV5.sol#1139-1294) Sandwich Vulnerability Detected in '_unoswap' at line [1293].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amount', 'minReturn']",
+        "markdown": "[UnoswapRouter._unoswap(address,IERC20,uint256,uint256,uint256[])](AggregationRouterV5.sol#L1139-L1294) Sandwich Vulnerability Detected in '_unoswap' at line [1293].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['amount', 'minReturn']",
+        "first_markdown_element": "",
+        "id": "5a375865b67aa9b86df0a97b594d6a43f833d677f4334dba74f9acf0ae742eb9",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "UnoswapV3Router._uniswapV3Swap(address,uint256,uint256,uint256[]) (AggregationRouterV5.sol#2807-2842) Sandwich Vulnerability Detected in '_uniswapV3Swap' at line [2835].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['minReturn', 'amount', 'recipient', 'pools']",
+        "markdown": "[UnoswapV3Router._uniswapV3Swap(address,uint256,uint256,uint256[])](AggregationRouterV5.sol#L2807-L2842) Sandwich Vulnerability Detected in '_uniswapV3Swap' at line [2835].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['minReturn', 'amount', 'recipient', 'pools']",
+        "first_markdown_element": "",
+        "id": "7feea9be28620f727faa5dba04e5e72a56cb50709ab0e17223d030b005371e9c",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4479].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['takingAmount', 'interaction', 'makingAmount', 'skipPermitAndThresholdAmount', 'order_']",
+        "markdown": "[OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address)](AggregationRouterV5.sol#L4417-L4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4479].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['takingAmount', 'interaction', 'makingAmount', 'skipPermitAndThresholdAmount', 'order_']",
+        "first_markdown_element": "",
+        "id": "82a211d047359b21491ad5d7c1cd99f2f448e73be40521c1ed8f3ec4f5ffce4f",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4461].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'takingAmount', 'order_']",
+        "markdown": "[OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address)](AggregationRouterV5.sol#L4417-L4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4461].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'takingAmount', 'order_']",
+        "first_markdown_element": "",
+        "id": "98de3a06816891f82adf3fac962de1109f21f573c9df009f8776161abf79c817",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4516, 4517, 4518].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'interaction', 'takingAmount', 'order_']",
+        "markdown": "[OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address)](AggregationRouterV5.sol#L4417-L4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4516, 4517, 4518].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'interaction', 'takingAmount', 'order_']",
+        "first_markdown_element": "",
+        "id": "9ec6e4c3b0174e3c097c0dfff8d5fd5e96217df0205d9c69e23633cf52a2bc74",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4468].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['takingAmount', 'interaction', 'makingAmount', 'skipPermitAndThresholdAmount', 'order_']",
+        "markdown": "[OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address)](AggregationRouterV5.sol#L4417-L4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4468].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['takingAmount', 'interaction', 'makingAmount', 'skipPermitAndThresholdAmount', 'order_']",
+        "first_markdown_element": "",
+        "id": "9ffe9c8503f99dca0e2b4b1bff0a4b95860e1f24730e2d19299632c92fcbc80d",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4474].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'interaction', 'takingAmount', 'order_']",
+        "markdown": "[OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address)](AggregationRouterV5.sol#L4417-L4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4474].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'interaction', 'takingAmount', 'order_']",
+        "first_markdown_element": "",
+        "id": "d321d07fdee5c0c6b5c903e5ad5fcc2aea4342f2517d5ad8362792aea7327d6d",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address) (AggregationRouterV5.sol#4417-4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4527].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'interaction', 'takingAmount', 'order_']",
+        "markdown": "[OrderMixin.fillOrderTo(OrderLib.Order,bytes,bytes,uint256,uint256,uint256,address)](AggregationRouterV5.sol#L4417-L4554) Sandwich Vulnerability Detected in 'fillOrderTo' at line [4527].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['makingAmount', 'interaction', 'takingAmount', 'order_']",
+        "first_markdown_element": "",
+        "id": "f4780d54d008083275fb4b91b40616ab7675bd4f26ee517f6651ff9372b0371b",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes,bytes) (AggregationRouterV5.sol#973-1028) Sandwich Vulnerability Detected in 'swap' at line [1021].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['desc']",
+        "markdown": "[GenericRouter.swap(IAggregationExecutor,GenericRouter.SwapDescription,bytes,bytes)](AggregationRouterV5.sol#L973-L1028) Sandwich Vulnerability Detected in 'swap' at line [1021].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['desc']",
+        "first_markdown_element": "",
+        "id": "f4c937890f9b2f6de9ff6cd5368d97a053365951d238821ce4d7752f83eae390",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      }
+    ]
+  }
+}

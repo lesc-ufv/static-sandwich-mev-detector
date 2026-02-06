@@ -1,0 +1,35 @@
+'solc --version' running
+'solc ./InstaDefaultImplementation.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --metadata-literal --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/InstaDefaultImplementation_0x01d1f55d94a53a9517c07f793f35320FAA0D2DCf/src' running
+Compilation warnings/errors on ./InstaDefaultImplementation.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> ./InstaDefaultImplementation.sol
+
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> ./default/variables.sol
+
+Warning: Visibility for constructor is ignored. If you want the contract to be non-deployable, making it "abstract" is sufficient.
+   --> ./InstaDefaultImplementation.sol:234:5:
+    |
+234 |     constructor(address _instaIndex) public Record(_instaIndex) {}
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning: Function state mutability can be restricted to pure
+   --> ./InstaDefaultImplementation.sol:140:5:
+    |
+140 |     function onERC721Received(
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning: Function state mutability can be restricted to pure
+   --> ./InstaDefaultImplementation.sol:152:5:
+    |
+152 |     function onERC1155Received(
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning: Function state mutability can be restricted to pure
+   --> ./InstaDefaultImplementation.sol:165:5:
+    |
+165 |     function onERC1155BatchReceived(
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+. analyzed (7 contracts with 1 detectors), 0 result(s) found

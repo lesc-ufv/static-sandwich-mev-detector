@@ -1,0 +1,78 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [],
+        "description": "UnxswapV3Router._uniswapV3Swap(address,address,uint256,uint256,uint256[]) (UnxswapV3Router.sol#46-342) Sandwich Vulnerability Detected in '_uniswapV3Swap' at line [334, 335, 336, 337, 338, 339].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['minReturn']",
+        "markdown": "[UnxswapV3Router._uniswapV3Swap(address,address,uint256,uint256,uint256[])](UnxswapV3Router.sol#L46-L342) Sandwich Vulnerability Detected in '_uniswapV3Swap' at line [334, 335, 336, 337, 338, 339].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['minReturn']",
+        "first_markdown_element": "",
+        "id": "560800bab37cb82b8fc4f5880a1d73bcbc6147480851d1ffecc4ad82c722f78a",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "UnxswapRouter._unxswapInternal(IERC20,uint256,uint256,bytes32[],address,address) (UnxswapRouter.sol#47-504) Sandwich Vulnerability Detected in '_unxswapInternal' at line [486, 487, 488, 489, 490, 491].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['minReturn', 'amount']",
+        "markdown": "[UnxswapRouter._unxswapInternal(IERC20,uint256,uint256,bytes32[],address,address)](UnxswapRouter.sol#L47-L504) Sandwich Vulnerability Detected in '_unxswapInternal' at line [486, 487, 488, 489, 490, 491].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['minReturn', 'amount']",
+        "first_markdown_element": "",
+        "id": "386d31a5889d0cc1efcf8652a7642a463556d95620e1d71f3e965a796708d809",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "SafeMath.divCeil(uint256,uint256) (libraries/SafeMath.sol#159-167) Sandwich Vulnerability Detected in 'divCeil' at line [162].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['b', 'a']",
+        "markdown": "[SafeMath.divCeil(uint256,uint256)](libraries/SafeMath.sol#L159-L167) Sandwich Vulnerability Detected in 'divCeil' at line [162].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['b', 'a']",
+        "first_markdown_element": "",
+        "id": "a234656debb2ba0af9b2e6f3c05cb1a6610c6f122d7da024cb5b061fbe8176cf",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "DexRouter._transferTokenToUser(address,address) (DexRouter.sol#233-260) Sandwich Vulnerability Detected in '_transferTokenToUser' at line [255].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "markdown": "[DexRouter._transferTokenToUser(address,address)](DexRouter.sol#L233-L260) Sandwich Vulnerability Detected in '_transferTokenToUser' at line [255].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "first_markdown_element": "",
+        "id": "05b1f5d6956515493150eae519c6b39ed534bc66d2ddeccc3ffc9fd702bf827d",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "UnxswapRouter._unxswapInternal(IERC20,uint256,uint256,bytes32[],address,address) (UnxswapRouter.sol#47-504) Sandwich Vulnerability Detected in '_unxswapInternal' at line [486, 487, 488, 489, 490, 491].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['minReturn', 'amount']",
+        "markdown": "[UnxswapRouter._unxswapInternal(IERC20,uint256,uint256,bytes32[],address,address)](UnxswapRouter.sol#L47-L504) Sandwich Vulnerability Detected in '_unxswapInternal' at line [486, 487, 488, 489, 490, 491].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['minReturn', 'amount']",
+        "first_markdown_element": "",
+        "id": "386d31a5889d0cc1efcf8652a7642a463556d95620e1d71f3e965a796708d809",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "UnxswapV3Router._uniswapV3Swap(address,address,uint256,uint256,uint256[]) (UnxswapV3Router.sol#46-342) Sandwich Vulnerability Detected in '_uniswapV3Swap' at line [334, 335, 336, 337, 338, 339].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['minReturn']",
+        "markdown": "[UnxswapV3Router._uniswapV3Swap(address,address,uint256,uint256,uint256[])](UnxswapV3Router.sol#L46-L342) Sandwich Vulnerability Detected in '_uniswapV3Swap' at line [334, 335, 336, 337, 338, 339].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['minReturn']",
+        "first_markdown_element": "",
+        "id": "560800bab37cb82b8fc4f5880a1d73bcbc6147480851d1ffecc4ad82c722f78a",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "SafeMath.divCeil(uint256,uint256) (libraries/SafeMath.sol#159-167) Sandwich Vulnerability Detected in 'divCeil' at line [162].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['b', 'a']",
+        "markdown": "[SafeMath.divCeil(uint256,uint256)](libraries/SafeMath.sol#L159-L167) Sandwich Vulnerability Detected in 'divCeil' at line [162].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['b', 'a']",
+        "first_markdown_element": "",
+        "id": "a234656debb2ba0af9b2e6f3c05cb1a6610c6f122d7da024cb5b061fbe8176cf",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      }
+    ]
+  }
+}

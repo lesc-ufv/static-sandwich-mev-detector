@@ -1,0 +1,21 @@
+'solc --version' running
+'solc ./UniswapV3Router.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --optimize --optimize-runs 200 --no-optimize-yul --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/TransitSwapRouterV5_0x00000047bB99ea4D791bb749D970DE71EE0b1A34/src' running
+'solc --version' running
+'solc ./AggregateRouter.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --optimize --optimize-runs 200 --no-optimize-yul --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/TransitSwapRouterV5_0x00000047bB99ea4D791bb749D970DE71EE0b1A34/src' running
+'solc --version' running
+'solc ./UniswapV2Router.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --optimize --optimize-runs 200 --no-optimize-yul --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/TransitSwapRouterV5_0x00000047bB99ea4D791bb749D970DE71EE0b1A34/src' running
+'solc --version' running
+'solc ./TransitSwapRouterV5.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --optimize --optimize-runs 200 --no-optimize-yul --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/TransitSwapRouterV5_0x00000047bB99ea4D791bb749D970DE71EE0b1A34/src' running
+Compilation warnings/errors on ./TransitSwapRouterV5.sol:
+Warning: Contract code size exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.
+ --> ./TransitSwapRouterV5.sol:9:1:
+  |
+9 | contract TransitSwapRouterV5 is UniswapV2Router, UniswapV3Router, AggregateRouter, CrossRouter  {
+  | ^ (Relevant source part starts here and spans across multiple lines).
+
+
+'solc --version' running
+'solc ./BaseCore.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --optimize --optimize-runs 200 --no-optimize-yul --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/TransitSwapRouterV5_0x00000047bB99ea4D791bb749D970DE71EE0b1A34/src' running
+'solc --version' running
+'solc ./CrossRouter.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --optimize --optimize-runs 200 --no-optimize-yul --allow-paths .,/home/josue/Github/test-mev/smart_contracts_database/vulnerable_contracts/TransitSwapRouterV5_0x00000047bB99ea4D791bb749D970DE71EE0b1A34/src' running
+. analyzed (69 contracts with 1 detectors), 0 result(s) found

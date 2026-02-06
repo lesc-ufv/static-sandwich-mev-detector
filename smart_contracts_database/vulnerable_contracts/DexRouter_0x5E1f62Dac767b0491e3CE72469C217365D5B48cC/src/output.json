@@ -1,0 +1,98 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [],
+        "description": "SafeMath.divCeil(uint256,uint256) (libraries/SafeMath.sol#159-167) Sandwich Vulnerability Detected in 'divCeil' at line [162].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['b', 'a']",
+        "markdown": "[SafeMath.divCeil(uint256,uint256)](libraries/SafeMath.sol#L159-L167) Sandwich Vulnerability Detected in 'divCeil' at line [162].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['b', 'a']",
+        "first_markdown_element": "",
+        "id": "a234656debb2ba0af9b2e6f3c05cb1a6610c6f122d7da024cb5b061fbe8176cf",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "CommonLib._transferTokenToUser(address,address) (libraries/CommonLib.sol#111-138) Sandwich Vulnerability Detected in '_transferTokenToUser' at line [133].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "markdown": "[CommonLib._transferTokenToUser(address,address)](libraries/CommonLib.sol#L111-L138) Sandwich Vulnerability Detected in '_transferTokenToUser' at line [133].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "first_markdown_element": "",
+        "id": "ad65cf63b8b3f50c0d3490c95efcf32da69662320d13cb3ac56963e806dc4364",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "DagRouter._exeNode(address,address,uint256,uint256,bool,IDexRouter.RouterPath,DagRouter.SwapState) (DagRouter.sol#99-191) Sandwich Vulnerability Detected in '_exeNode' at line [162].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['path', 'nodeBalance']",
+        "markdown": "[DagRouter._exeNode(address,address,uint256,uint256,bool,IDexRouter.RouterPath,DagRouter.SwapState)](DagRouter.sol#L99-L191) Sandwich Vulnerability Detected in '_exeNode' at line [162].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['path', 'nodeBalance']",
+        "first_markdown_element": "",
+        "id": "ca507397b33db8710c4d60afc12cf97313d52b60c56ebb2a973ae4afc8b06d06",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "SafeMath.divCeil(uint256,uint256) (libraries/SafeMath.sol#159-167) Sandwich Vulnerability Detected in 'divCeil' at line [162].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['b', 'a']",
+        "markdown": "[SafeMath.divCeil(uint256,uint256)](libraries/SafeMath.sol#L159-L167) Sandwich Vulnerability Detected in 'divCeil' at line [162].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['b', 'a']",
+        "first_markdown_element": "",
+        "id": "a234656debb2ba0af9b2e6f3c05cb1a6610c6f122d7da024cb5b061fbe8176cf",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "CommissionLib._doCommissionAndTrimToToken(AbstractCommissionLib.CommissionInfo,address,uint256,address,AbstractCommissionLib.TrimInfo) (libraries/CommissionLib.sol#603-851) Sandwich Vulnerability Detected in '_doCommissionAndTrimToToken' at line [817, 818, 819, 820, 821, 822].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['balanceBefore']",
+        "markdown": "[CommissionLib._doCommissionAndTrimToToken(AbstractCommissionLib.CommissionInfo,address,uint256,address,AbstractCommissionLib.TrimInfo)](libraries/CommissionLib.sol#L603-L851) Sandwich Vulnerability Detected in '_doCommissionAndTrimToToken' at line [817, 818, 819, 820, 821, 822].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['balanceBefore']",
+        "first_markdown_element": "",
+        "id": "5a1cc894225854ad6d2338133484ed52a0447ee6cee15a3a18de38bccce08c1c",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "SafeMath.divCeil(uint256,uint256) (libraries/SafeMath.sol#159-167) Sandwich Vulnerability Detected in 'divCeil' at line [162].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['b', 'a']",
+        "markdown": "[SafeMath.divCeil(uint256,uint256)](libraries/SafeMath.sol#L159-L167) Sandwich Vulnerability Detected in 'divCeil' at line [162].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['b', 'a']",
+        "first_markdown_element": "",
+        "id": "a234656debb2ba0af9b2e6f3c05cb1a6610c6f122d7da024cb5b061fbe8176cf",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "CommissionLib._doCommissionAndTrimToToken(AbstractCommissionLib.CommissionInfo,address,uint256,address,AbstractCommissionLib.TrimInfo) (libraries/CommissionLib.sol#603-851) Sandwich Vulnerability Detected in '_doCommissionAndTrimToToken' at line [836, 837, 838, 839, 840].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['balanceBefore', 'trimInfo', 'commissionInfo']",
+        "markdown": "[CommissionLib._doCommissionAndTrimToToken(AbstractCommissionLib.CommissionInfo,address,uint256,address,AbstractCommissionLib.TrimInfo)](libraries/CommissionLib.sol#L603-L851) Sandwich Vulnerability Detected in '_doCommissionAndTrimToToken' at line [836, 837, 838, 839, 840].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['balanceBefore', 'trimInfo', 'commissionInfo']",
+        "first_markdown_element": "",
+        "id": "a715f7a531e5acc0f8fc28b384d505ffa667e751c63e8a260e294485599060c2",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "CommonLib._transferTokenToUser(address,address) (libraries/CommonLib.sol#111-138) Sandwich Vulnerability Detected in '_transferTokenToUser' at line [133].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "markdown": "[CommonLib._transferTokenToUser(address,address)](libraries/CommonLib.sol#L111-L138) Sandwich Vulnerability Detected in '_transferTokenToUser' at line [133].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['token']",
+        "first_markdown_element": "",
+        "id": "ad65cf63b8b3f50c0d3490c95efcf32da69662320d13cb3ac56963e806dc4364",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "DagRouter._exeNode(address,address,uint256,uint256,bool,IDexRouter.RouterPath,DagRouter.SwapState) (DagRouter.sol#99-191) Sandwich Vulnerability Detected in '_exeNode' at line [162].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['path', 'nodeBalance']",
+        "markdown": "[DagRouter._exeNode(address,address,uint256,uint256,bool,IDexRouter.RouterPath,DagRouter.SwapState)](DagRouter.sol#L99-L191) Sandwich Vulnerability Detected in '_exeNode' at line [162].\n\t- Logic: Inequality comparison (<, >) detected.\n\t- Compares Active Source (Swap/Balance) against User Input ['path', 'nodeBalance']",
+        "first_markdown_element": "",
+        "id": "ca507397b33db8710c4d60afc12cf97313d52b60c56ebb2a973ae4afc8b06d06",
+        "check": "generic-slippage",
+        "impact": "High",
+        "confidence": "High"
+      }
+    ]
+  }
+}
