@@ -76,13 +76,32 @@ python setup.py develop
 
 # Teste mínimo
 
+O teste mínimo foi parametrizado para executar a detecção em qualquer contrato inteligente, a partir do seguinte comando:
+
+```bash
+python3 test.py <path_do_contrato_inteligente> --json <nome_do_arquivo_json>.json
+```
+
+**OBS. 1:** O nome do contrato inteligente **deve ser exatamente** o nome do arquivo `.sol`.
+
+**OBS. 2:** A flag `--json` e nome do arquivo JSON são opcionais.
+ 
 Para verificar se a instalação foi bem-sucedida, execute o script de teste básico que analisa um contrato de exemplo:
 
 ```bash
-python3 test.py
+python3 test.py smart_contracts_database/Example.sol
 ```
 
-**Resultado esperado:** O código deve imprimir no terminal a saída da ferramenta slither indicando a linha de código das oportunidades de Sanduíche MEV encontradas.
+**Descrição do exemplo:** O exemplo testado é um contrato inteligente agregador, que possui padrões de verificação de derrapagem pós-execução explícita.
+
+**Resultado esperado:** O código deve imprimir no terminal a saída da ferramenta slither indicando a linha de código das oportunidades de Sanduíche MEV encontradas. Exemplo de saída:
+
+```bash
+...
+- Compares Active Source (Swap/Balance) against User Input ['minReturn', 'amount']UnoswapV3Router._uniswapV3Swap(address,uint256,uint256,uint256[]) (Example.sol#2807-2842) Sandwich Opportunity Detected in '_uniswapV3Swap' at line [2835].
+	- Logic: Inequality comparison (<, >, <=, >=) detected.
+...
+```
 
 # Experimentos
 

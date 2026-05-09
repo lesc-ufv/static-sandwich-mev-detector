@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 import subprocess
 
 def get_solidity_pragma_version(file_path):
@@ -54,26 +55,38 @@ def set_solc_version(sc_path):
         return False
 
 
-def run_slither(sc_name):
+def run_slither(sc_name, json_flag, json_filename):
     try:
-        slither_command = ["slither", f"{sc_name}.sol", "--detect", "static-sandwich"]
+        if json_flag == "--json":
+            slither_command = ["slither", f"{sc_name}", "--detect", "static-sandwich", "--json", json_filename]
+        else:
+            slither_command = ["slither", f"{sc_name}", "--detect", "static-sandwich"]
         result = subprocess.run(slither_command, capture_output=True, text=True, check=True)
     except subprocess.CalledProcessError as e:
         print(e.stderr)
         print("Test finished successfully!")
 
 
-database_path = "smart_contracts_database"
-sc_name = "Example"
+sc_path = sys.argv[1]
+try:
+    json_flag = sys.argv[2]
+    json_filename = sys.argv[3]
+except:
+    json_flag = ""
+    json_filename = ""
+
+
+sc_name = sc_path.split("/")[-1]
+database_path = sc_path.replace(f"/{sc_name}", "")
 
 
 print(f"Running tests for {sc_name}.sol...")
-sc_path = f"{database_path}/{sc_name}.sol"
+#sc_path = f"{database_path}/{sc_name}.sol"
 
 # Set compiler
 set_solc_version(sc_path)
 
 # Run slither
 os.chdir(f"{database_path}")
-run_slither(sc_name)
+run_slither(sc_name, json_flag, json_filename)
 os.chdir("..")
